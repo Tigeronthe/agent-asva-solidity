@@ -78,7 +78,7 @@ contract RavenAccessWithSubgraphHooks is Ownable, ReentrancyGuard, Pausable {
     event SubscriptionCancelled(address indexed user, uint8 indexed planId, uint256 cancelledAt, uint256 seq);
 
     // Inference log - each inference request creates an event with optional off-chain contextHash
-    // contextHash: Redis snapshot pointer that merges model input/output & memory snapshot
+    // contextHash: Neo4j snapshot pointer that merges model input/output & memory snapshot
     event InferenceLog(
         address indexed user,
         string mode,
